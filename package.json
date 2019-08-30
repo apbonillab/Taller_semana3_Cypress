@@ -1,0 +1,9 @@
+{
+    "name": "ratp-lighthouse-recipe",
+    "private": true,
+    "scripts": {},
+    "devDependencies": {
+        "cypress": "^0.20.0"
+    },
+    "dependencies": {}
+}
