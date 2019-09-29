@@ -12,7 +12,6 @@ describe('Los estudiantes registro', function() {
     cy.get('.cajaSignUp').find('input[name="apellido"]').click().type("bonilla beleño")
     cy.get('.cajaSignUp').find('input[name="correo"]').click().type(userID_Alpha_Numeric()+"apbonillab@gmail.co")
     cy.get('.jsx-527058112 [type="checkbox"]').not('[disabled]').check().should('be.checked')
-    cy.screenshot();
     // cy.get('[name="idPrograma"]').contains('16').then(option => {
       //   // Confirm have correct option
       //   cy.wrap(option).contains('22');
@@ -22,11 +21,8 @@ describe('Los estudiantes registro', function() {
       // });
      cy.get('[name="idPrograma"]').select('16');
      cy.get('.cajaSignUp').find('input[name="password"]').click().type("Lupe1990")
-     cy.screenshot();
      cy.get('.cajaSignUp').contains('Registrarse').click()
-     cy.screenshot();
      cy.get('.sweet-alert').contains('Registro exitoso') 
-     cy.screenshot();
      cy.get('.sweet-alert').contains('Ok').click()
      cy.screenshot();
   })
@@ -51,10 +47,9 @@ describe('login correcto ', function() {
       cy.contains('Ingresar').click()
       cy.get('.cajaLogIn').find('input[name="correo"]').click().type("apbonillab@gmail.co")
       cy.get('.cajaLogIn').find('input[name="password"]').click().type("Lupe1990")
-      cy.screenshot();
       cy.get('.cajaLogIn').contains('Ingresar').click()
-      cy.screenshot();
       cy.get('#cuenta')
+      cy.screenshot();
   
     })
 })
@@ -75,11 +70,8 @@ describe('creación de una cuenta con un login que ya existe.', function() {
       cy.get('.jsx-527058112 [type="checkbox"]').not('[disabled]').check().should('be.checked')
       cy.get('[name="idPrograma"]').select('16');
       cy.get('.cajaSignUp').find('input[name="password"]').click().type("Lupe1990")
-      cy.screenshot();
       cy.get('.cajaSignUp').contains('Registrarse').click()
-      cy.screenshot();
       cy.get('.sweet-alert').contains("Error: Ya existe un usuario registrado con el correo 'apbonillab@gmail.co'")
-      cy.screenshot();
       cy.get('.sweet-alert').contains('Ok').click()
       cy.screenshot();
   })
