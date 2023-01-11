@@ -3,7 +3,7 @@
     "private": true,
     "scripts": {},
     "devDependencies": {
-        "cypress": "^0.20.0"
+        "cypress": "^12.3.0"
     },
     "dependencies": {}
 }
